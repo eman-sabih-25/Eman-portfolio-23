@@ -1,0 +1,358 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: Segoe UI; 
+}
+body { 
+    background: #fff5f8; 
+    color: #333; 
+    overflow-x: hidden; }
+
+/* Animation 1: Neeche se upar aana */
+@keyframes fadeUp {
+from { 
+    opacity: 0; 
+    transform: translateY(30px); 
+}
+to { 
+    opacity: 1; 
+    transform: translateY(0); 
+}
+}
+/* Animation 2: Circle ka halka sa tairna */
+@keyframes float {
+0%, 100% { 
+    transform: translateY(0); 
+}
+50% { 
+    transform: translateY(-15px); 
+}
+}
+/* Animation 3: Button ka shine */
+@keyframes shine {
+0% { 
+    box-shadow: 0 0 0 0 rgba(81,5,31,0.4); 
+}
+100% { 
+    box-shadow: 0 0 0 15px rgba(81,5,31,0); 
+}
+}
+
+nav { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 15px 8%; 
+    background: white; 
+    box-shadow: 0 2px 15px rgba(81,5,31,0.1); 
+    position: sticky; 
+    top:0; 
+    z-index: 100; 
+}
+.logo { 
+    color: #51051f; 
+    font-size: 22px; 
+}
+nav ul { 
+    display: flex; 
+    list-style: none; 
+    gap: 10px;
+    flex-wrap: wrap;
+}
+nav a { 
+    text-decoration: none; 
+    color: #333; 
+    font-weight: bold; 
+    padding: 8px 12px; 
+    border-radius: 20px; 
+    transition: 0.3s;
+    font-size: 14px;
+}
+nav a:hover { 
+    background: #51051f; 
+    color: white; 
+    transform: scale(1.1); 
+}
+
+.hero { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 70px 8%; 
+    flex-wrap: wrap; 
+    animation: fadeUp 1s ease; 
+}
+.hero-text h1 { 
+    font-size: 48px; 
+    line-height: 1.2; 
+}
+.hero-text h1 span { 
+    color: #51051f; 
+    background: #ffe4ec; 
+    padding: 0 10px; 
+    border-radius: 10px; 
+}
+.hero-text h3 { 
+    margin: 12px 0; 
+    color: #ff5c8a; 
+}
+.btn { 
+    display: inline-block; 
+    margin-top: 20px; 
+    padding: 12px 28px; 
+    background: #51051f; 
+    color: white; 
+    text-decoration: none; 
+    border-radius: 30px; 
+    font-weight: bold; 
+    animation: shine 1.5s infinite; 
+    transition: 0.3s; 
+}
+.btn:hover { 
+    transform: scale(1.1) rotate(-2deg); 
+    background: #ff5c8a; 
+}
+
+.circle { 
+    width: 200px; 
+    height: 200px; 
+    background: linear-gradient(135deg, #51051f, #ff5c8a); 
+    color: white; 
+    font-size: 90px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    border-radius: 50%; 
+    animation: float 3s ease-in-out infinite; 
+    box-shadow: 0 15px 30px rgba(255,92,138,0.4); 
+    border: 5px solid white; 
+}
+section{
+    padding: 60px 8%;
+}
+
+#about{
+    padding: 60px 8%;
+}
+#about h2 {
+    font-size: 32px;
+    color: #9e1b4d;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.about-row{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 30px;
+    background-color: #ffe6ee;
+    padding: 30px;
+    border-radius: 20px;
+}
+.about-text{
+    flex: 1;
+}
+
+.about-img{
+    flex: 1;
+}
+
+.about-img img{
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 18px;
+    border: 4px solid #ffb3c6;
+}
+.about-tag{
+    background-color: white;
+    color: #9e1b4d;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    border: 1.5px solid #9e1b4d;
+}
+.about-text h3{
+    margin: 12px 0;
+    font-size: 24px;
+    color: #333;
+}
+.about-text p{
+    margin-bottom: 10px;
+    text-align: center;
+    line-height: 1.7;
+    color: #555;
+    
+}
+
+.about-text p {
+    margin-bottom: 15px;
+}
+.about-text, .projects, .skills-section{ 
+    padding: 50px 8%; 
+    text-align: center; 
+    animation: fadeUp 1.2s ease; 
+}
+section h2, .projects h2, .skills-section h2, .lang h2, .contact-box h2 { 
+    font-size: 32px; 
+    color: #9e1b4d; 
+    margin-bottom: 15px; 
+    text-align: center;
+}
+
+.section-para{
+    text-align: center;
+    color: #666;
+    max-width: 600px;
+    margin:0 auto;
+}
+.skills-grid { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    top: 20px;
+    padding: 25px 8%;
+    background: white; 
+    border: 2px solid #ffdae4; 
+    border-radius: 25px; 
+    color: #51051f; 
+    font-weight: bold; 
+    cursor: pointer; 
+    transition: 0.3s; 
+    gap: 20px;
+    border-top: 5px solid #ff5c8a;
+}
+
+.skill{
+    background:white; 
+    padding:20px; 
+    border-radius:15px; 
+    box-shadow:0 3px 12px rgba(0,0,0,0.07); 
+}
+
+.skill h3 { 
+    display:flex; 
+    justify-content:space-between; 
+    margin-bottom:8px; 
+}
+
+.skill-desc { 
+    font-size:14px; 
+    color:#888; 
+    margin-top:8px; 
+}
+
+
+.bar{
+    background-color: #ffe4ec;
+    height: 25px;
+    border-radius: 20px;
+    margin: 8px auto 18px;
+    max-width: 500px;
+    overflow: hidden;
+}
+
+.fill{
+    background: linear-gradient(90deg #51051f #ff5c8a);
+    color: rgb(137, 67, 67);
+    height: 100%;
+    border-radius: 20px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects { 
+    display:grid; 
+    grid-template-columns:repeat(3,1fr); 
+    gap:20px; 
+    margin-top:20px; 
+}
+
+.card { 
+    background: white; 
+    padding: 30px 20px; 
+    border-radius: 20px; 
+    box-shadow: 0 5px 15px rgba(228, 174, 174, 0.08); 
+    transition: 0.4s; 
+    border-top: 5px solid #ff5c8a; 
+}
+.card:hover { 
+    transform: translateY(-15px) scale(1.03); 
+    box-shadow: 0 20px 30px rgba(255,92,138,0.25); 
+    background: #fff0f4; 
+}
+.card h3 { 
+    color: #51051f; 
+    margin-bottom: 8px; 
+}
+
+.card p { 
+    color:#666; 
+    line-height:1.6; 
+    font-size:15px; 
+}
+.lang {
+    background-color: white;
+    transition: 0.4s;
+    max-width:700px;
+    margin:0 auto; 
+    text-align:center; 
+    padding:35px; 
+    border-radius:20px; 
+    box-shadow:0 3px 12px rgba(137, 94, 94, 0.07); 
+    border-top: 5px solid #ff5c8a;
+    display:flex; 
+    top: 25px;
+    justify-content:center; 
+    gap:15px; 
+    flex-wrap:wrap; 
+    margin-top:15px; 
+}
+.lang span { 
+    background:white; 
+    border:1.5px solid #9e1b4d; 
+    color:#9e1b4d; 
+    padding:8px 22px; 
+    border-radius:30px; 
+    font-weight:600; 
+}
+.contact-box, .about-text { 
+    background:white; 
+    max-width:700px;
+    margin:0 auto; 
+    text-align:center; 
+    padding:35px; 
+    border-radius:20px; 
+    box-shadow:0 3px 12px rgba(137, 94, 94, 0.07); 
+    border-top: 5px solid #ff5c8a;
+    transition: 0.4s;
+}
+.contact-box p { 
+    color:#685959; 
+    line-height:1.7; 
+    margin:12px 0; 
+}
+.email-line { 
+    font-size:14px; 
+    margin-top:15px; 
+}
+footer { 
+    background:#9e1b4d; 
+    color:white; 
+    text-align:center; 
+    padding:20px; 
+}
+@media(max-width:768px){ 
+    .projects{
+        grid-template-columns:1fr
+    } 
+    .skills-grid{
+        grid-template-columns:1fr
+    } 
+    .hero h1{
+        font-size:34px
+    } 
+}
